@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AA5ED31C-4D58-437D-8540-2A1D306CAEA9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Neuroph</RootNamespace>
+    <AssemblyName>Neuroph</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Connection.cs" />
+    <Compile Include="Core\Exceptions\VectorSizeMismatchException.cs" />
+    <Compile Include="Core\Input\And.cs" />
+    <Compile Include="Core\Input\Diference.cs" />
+    <Compile Include="Core\Input\InputFunction.cs" />
+    <Compile Include="Core\Input\Intensity.cs" />
+    <Compile Include="Core\Input\Max.cs" />
+    <Compile Include="Core\Input\Min.cs" />
+    <Compile Include="Core\Input\Or.cs" />
+    <Compile Include="Core\Input\Product.cs" />
+    <Compile Include="Core\Input\Sum.cs" />
+    <Compile Include="Core\Input\SummingFunction.cs" />
+    <Compile Include="Core\Input\SumSqr.cs" />
+    <Compile Include="Core\Input\WeightedInput.cs" />
+    <Compile Include="Core\Input\WeightedSum.cs" />
+    <Compile Include="Core\Input\WeightsFunction.cs" />
+    <Compile Include="Core\Layer.cs" />
+    <Compile Include="Core\Learning\IterativeLearning.cs" />
+    <Compile Include="Core\Learning\LearningRule.cs" />
+    <Compile Include="Core\Learning\SupervisedLearning.cs" />
+    <Compile Include="Core\Learning\SupervisedTrainingElement.cs" />
+    <Compile Include="Core\Learning\TrainingElement.cs" />
+    <Compile Include="Core\Learning\TrainingSet.cs" />
+    <Compile Include="Core\Learning\UnsupervisedLearning.cs" />
+    <Compile Include="Core\NeuralNetwork.cs" />
+    <Compile Include="Core\Neuron.cs" />
+    <Compile Include="Core\Transfer\Gaussian.cs" />
+    <Compile Include="Core\Transfer\Linear.cs" />
+    <Compile Include="Core\Transfer\Ramp.cs" />
+    <Compile Include="Core\Transfer\Sgn.cs" />
+    <Compile Include="Core\Transfer\Sigmoid.cs" />
+    <Compile Include="Core\Transfer\Step.cs" />
+    <Compile Include="Core\Transfer\Tanh.cs" />
+    <Compile Include="Core\Transfer\TransferFunction.cs" />
+    <Compile Include="Core\Transfer\Trapezoid.cs" />
+    <Compile Include="Core\Weight.cs" />
+    <Compile Include="NNet\Adaline.cs" />
+    <Compile Include="NNet\BAM.cs" />
+    <Compile Include="NNet\CompetitiveNetwork.cs" />
+    <Compile Include="NNet\Comp\BiasNeuron.cs" />
+    <Compile Include="NNet\Comp\CompetitiveLayer.cs" />
+    <Compile Include="NNet\Comp\CompetitiveNeuron.cs" />
+    <Compile Include="NNet\Comp\DelayedConnection.cs" />
+    <Compile Include="NNet\Comp\DelayedNeuron.cs" />
+    <Compile Include="NNet\Comp\InputOutputNeuron.cs" />
+    <Compile Include="NNet\Comp\ThresholdNeuron.cs" />
+    <Compile Include="NNet\Hopfield.cs" />
+    <Compile Include="NNet\Instar.cs" />
+    <Compile Include="NNet\Kohonen.cs" />
+    <Compile Include="NNet\Learning\BackPropagation.cs" />
+    <Compile Include="NNet\Learning\BinaryDeltaRule.cs" />
+    <Compile Include="NNet\Learning\BinaryHebbianLearning.cs" />
+    <Compile Include="NNet\Learning\CompetitiveLearning.cs" />
+    <Compile Include="NNet\Learning\DynamicBackPropagation.cs" />
+    <Compile Include="NNet\Learning\HopfieldLearning.cs" />
+    <Compile Include="NNet\Learning\InstarLearning.cs" />
+    <Compile Include="NNet\Learning\KohonenLearning.cs" />
+    <Compile Include="NNet\Learning\LMS.cs" />
+    <Compile Include="NNet\Learning\MomentumBackpropagation.cs" />
+    <Compile Include="NNet\Learning\OjaLearning.cs" />
+    <Compile Include="NNet\Learning\OutstarLearning.cs" />
+    <Compile Include="NNet\Learning\PerceptronLearning.cs" />
+    <Compile Include="NNet\Learning\SigmoidDeltaRule.cs" />
+    <Compile Include="NNet\Learning\SupervisedHebbianLearning.cs" />
+    <Compile Include="NNet\Learning\UnsupervisedHebbianLearning.cs" />
+    <Compile Include="NNet\MaxNet.cs" />
+    <Compile Include="NNet\MultiLayerPerceptron.cs" />
+    <Compile Include="NNet\Outstar.cs" />
+    <Compile Include="NNet\Perceptron.cs" />
+    <Compile Include="NNet\RbfNetwork.cs" />
+    <Compile Include="NNet\SupervisedHebbianNetwork.cs" />
+    <Compile Include="NNet\UnsupervisedHebbianNetwork.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\ConnectionFactory.cs" />
+    <Compile Include="Util\LayerFactory.cs" />
+    <Compile Include="Util\NeuralNetworkFactory.cs" />
+    <Compile Include="Util\NeuralNetworkType.cs" />
+    <Compile Include="Util\NeuronFactory.cs" />
+    <Compile Include="Util\NeuronProperties.cs" />
+    <Compile Include="Util\NeurophExtensionMethods.cs" />
+    <Compile Include="Util\IObserver.cs" />
+    <Compile Include="Util\IObservable.cs" />
+    <Compile Include="Util\Plugins\LabelsPlugin.cs" />
+    <Compile Include="Util\Plugins\PluginBase.cs" />
+    <Compile Include="Util\Properties.cs" />
+    <Compile Include="Util\SummingFunctionType.cs" />
+    <Compile Include="Util\ThreadSafeRandom.cs" />
+    <Compile Include="Util\TransferFunctionType.cs" />
+    <Compile Include="Util\VectorParser.cs" />
+    <Compile Include="Util\WeightsFunctionType.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
